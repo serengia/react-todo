@@ -5,6 +5,7 @@ function Header() {
   return (
     <div className="header-container row">
       <FaBars className="menu-bar" />
+      {/* <NavList /> */}
     </div>
   );
 }

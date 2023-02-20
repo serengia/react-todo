@@ -105,5 +105,10 @@ body {
     .trash-icon {
       margin-left: auto;
     }
+
+    .checkbox:checked + p {
+      text-decoration: line-through;
+      color: #636363;
+    }
   }
 }

@@ -6,7 +6,7 @@ import TodoList from "../components/TodoList";
 const initialList = () => JSON.parse(localStorage.getItem("todoItems")) || [];
 
 function HomePage() {
-  const [todoList, setTodoList] = useState(initialList);
+  const [todoList, setTodoList] = useState(initialList());
   const [reRender, setReRender] = useState("initial");
   const reRenderHandler = (render) => {
     setReRender(render);
@@ -26,7 +26,7 @@ function HomePage() {
           description="Items will persist in the browser local storage"
         />
         <Form onAddItem={reRenderHandler} />
-        <TodoList todoListItems={todoList} />
+        <TodoList todoListItems={todoList} onDeleteItem={reRenderHandler} />
       </div>
     </main>
   );

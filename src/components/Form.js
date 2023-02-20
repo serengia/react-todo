@@ -14,13 +14,13 @@ function Form(props) {
       id: uuidv4(),
       item,
     };
-    // setTodoObj(todo);
 
     const storedTodoList = JSON.parse(localStorage.getItem("todoItems")) || [];
     storedTodoList.push(todo);
     localStorage.setItem("todoItems", JSON.stringify(storedTodoList));
 
     onAddItem(todo.id);
+    todoInputRef.current.value = "";
   };
 
   return (
