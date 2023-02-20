@@ -50,7 +50,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Maths magician -- react project <a name="about-project"></a>
+# 📖 React todo list app <a name="about-project"></a>
 
 > A simple react to do list application that uses key react features such as components, props, and routing.
 
@@ -88,9 +88,8 @@ After you're finished please remove all the comments and instructions!
 
 > The application has the following key features.
 
-- **A fully functional calculator that utilizes react states**
+- **Todo list functionality**
 - **Routing implementation**
-- **Random quotes implementation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +99,7 @@ After you're finished please remove all the comments and instructions!
 
 > Deployed project link coming soon.
 
-> - [Live Demo Link](https://serengia-math-magician.netlify.app/)
+> - [Live Demo Link](https://github.com/serengia/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
