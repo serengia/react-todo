@@ -43,6 +43,7 @@ body {
     font-size: 9rem;
     color: $color-grey-light;
   }
+
   height: 15rem;
   text-align: center;
   display: flex;
@@ -50,6 +51,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 0.4rem;
+
   p {
     color: #b5b5b5;
   }
@@ -71,6 +73,7 @@ body {
     font-family: inherit;
     font-size: inherit;
     flex: 1;
+
     &:focus {
       outline: none;
     }
@@ -102,11 +105,54 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    .trash-icon {
-      margin-left: auto;
+
+    .approve-button,
+    .close-button,
+    .edit-button,
+    .delete-button {
+      margin-left: 0.5rem;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+
+      .icon {
+        font-size: 2rem;
+      }
     }
 
-    .checkbox:checked + p {
+    .close-button {
+      display: none;
+      color: tomato;
+    }
+
+    .approve-button {
+      display: none;
+      color: green;
+    }
+
+    .edit-button {
+      color: blue;
+    }
+
+    .delete-button {
+      color: crimson;
+    }
+
+    .todo-input {
+      border: none;
+      background-color: transparent;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: 500;
+      margin-right: auto;
+      flex: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .checkbox:checked + .todo-input {
       text-decoration: line-through;
       color: #636363;
     }
