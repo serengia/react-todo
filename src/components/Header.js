@@ -1,9 +1,10 @@
 import React from "react";
+import { FaBars } from "react-icons/fa";
 
 function Header() {
   return (
     <div className="header-container row">
-      <h1 className="header-title">React to do app</h1>
+      <FaBars className="menu-bar" />
     </div>
   );
 }

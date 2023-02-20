@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap");
 
+$color-grey-light: #aeadad;
+$color-grey-dark: #333;
+
 *,
 *::after,
 *::before {
@@ -15,11 +18,92 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: $color-grey-dark;
   font-weight: 500;
+  padding-bottom: 4rem;
 }
 
 .row {
   max-width: 90%;
   margin: 0 auto;
+}
+
+.header-container {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bar {
+  font-size: 3rem;
+}
+
+.hero {
+  h1 {
+    font-size: 9rem;
+    color: $color-grey-light;
+  }
+  height: 15rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  p {
+    color: #b5b5b5;
+  }
+}
+
+.form {
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  input {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    flex: 1;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  button .add-icon {
+    font-size: 2rem;
+  }
+}
+
+.todo-list {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  list-style: none;
+
+  .todo-item {
+    margin-top: 2px;
+    background-color: #f0efef;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .trash-icon {
+      margin-left: auto;
+    }
+  }
 }
