@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
 import { CSSTransition } from "react-transition-group";
 import NavList from "./NavList";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const nodeRef = useRef(null);
   const Icon = menuOpen ? HiX : HiMenuAlt1;
 
   return (
@@ -16,8 +17,9 @@ function Header() {
         mountOnEnter
         in={menuOpen}
         timeout={300}
+        nodeRef={nodeRef}
       >
-        <NavList />
+        <NavList nodeRef={nodeRef} />
       </CSSTransition>
     </div>
   );

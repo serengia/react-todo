@@ -20,14 +20,16 @@ function HomePage() {
 
   return (
     <main>
-      <div className="home-container row">
-        <Hero
-          title="todos."
-          description="Items will persist in the browser local storage"
-        />
-        <Form onAddItem={reRenderHandler} />
-        <TodoList todoListItems={todoList} onDeleteItem={reRenderHandler} />
-      </div>
+      <section className="row">
+        <div className="home-container">
+          <Hero
+            title="todos."
+            description="Items will persist in the browser local storage"
+          />
+          <Form onAddItem={reRenderHandler} />
+          <TodoList todoListItems={todoList} onDeleteItem={reRenderHandler} />
+        </div>
+      </section>
     </main>
   );
 }

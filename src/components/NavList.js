@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-function NavList() {
+function NavList(props) {
+  const { nodeRef } = props;
   return (
-    <nav className="nav">
+    <nav className="nav" ref={nodeRef}>
       <ul className="nav-links">
         <li className="link-item">
           <NavLink

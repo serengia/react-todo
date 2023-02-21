@@ -73,6 +73,12 @@ body {
   }
 }
 
+.about-container,
+.home-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .hero {
   h1 {
     font-size: 9rem;
@@ -96,8 +102,6 @@ body {
   box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   border-radius: 0.4rem;
-  width: 50%;
-  margin: 0 auto;
   margin-top: 2rem;
   display: flex;
   gap: 2rem;
@@ -128,8 +132,6 @@ body {
 }
 
 .todo-list {
-  width: 50%;
-  margin: 0 auto;
   margin-top: 1rem;
   list-style: none;
 
@@ -197,8 +199,6 @@ body {
 .about-container {
   .details {
     padding: 2rem 0;
-    width: 60%;
-    margin: 0 auto;
 
     p {
       font-size: 2.4rem;
@@ -272,5 +272,39 @@ body {
   100% {
     opacity: 0;
     transform: translateX(-100%);
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: 600px) {
+  .about-container,
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .form {
+    button .add-icon {
+      font-size: 1.6rem;
+    }
+  }
+
+  .todo-list {
+    .todo-item {
+      .approve-button,
+      .close-button,
+      .edit-button,
+      .delete-button {
+        .icon {
+          font-size: 1.6rem;
+        }
+      }
+    }
   }
 }
