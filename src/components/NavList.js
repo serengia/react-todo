@@ -1,30 +1,23 @@
-import * as React from "react";
 import { NavLink } from "react-router-dom";
 
 function NavList() {
-  // This styling will be applied to a <NavLink> when the
-  // route that it links to is currently selected.
-  const activeStyle = {
-    color: "pink",
-  };
-
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className="nav">
+      <ul className="nav-links">
+        <li className="link-item">
           <NavLink
+            className={(state) => (state.isActive ? "active-link" : "")}
             to="/"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Home
           </NavLink>
         </li>
-        <li>
+        <li className="link-item">
           <NavLink
-            to="about"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={(state) => (state.isActive ? "active-link" : "")}
+            to="/about"
           >
-            Tasks
+            About
           </NavLink>
         </li>
       </ul>

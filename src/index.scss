@@ -32,10 +32,45 @@ body {
   height: 8rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .menu-bar {
-  font-size: 3rem;
+  font-size: 4rem;
+}
+
+.nav {
+  width: 20rem;
+  height: 10rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.6rem 0.6rem #0000002f;
+  position: absolute;
+  top: 6.5rem;
+  left: 0;
+  padding: 2rem;
+  border-radius: 0.4rem;
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .link-item {
+      font-size: 2rem;
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #333;
+      }
+
+      a:active,
+      a:hover {
+        color: blue;
+      }
+    }
+  }
 }
 
 .hero {
@@ -156,5 +191,86 @@ body {
       text-decoration: line-through;
       color: #636363;
     }
+  }
+}
+
+.about-container {
+  .details {
+    padding: 2rem 0;
+    width: 60%;
+    margin: 0 auto;
+
+    p {
+      font-size: 2.4rem;
+      line-height: 1.5;
+    }
+
+    .contacts {
+      margin-top: 4rem;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          .icon {
+            color: $color-grey-light;
+          }
+
+          a:link,
+          a:visited {
+            text-decoration: none;
+            color: rgb(3, 3, 126);
+          }
+
+          a:active,
+          a:hover {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-link {
+  color: blue !important;
+}
+
+.nav-slide-enter-active {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.nav-slide-exit-active {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 }
