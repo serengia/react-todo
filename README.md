@@ -48,6 +48,8 @@ After you're finished please remove all the comments and instructions!
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
+![react-todo-app](https://user-images.githubusercontent.com/69452516/220362528-65865668-cc8b-483a-be95-68972d1f0085.png)
+
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 React todo list app <a name="about-project"></a>
@@ -97,9 +99,9 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Deployed project link coming soon.
+> Deployed project link.
 
-> - [Live Demo Link](https://serecode-react-todo.netlify.app/)
+> - [Live website](https://serecode-react-todo.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
