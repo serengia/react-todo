@@ -99,7 +99,7 @@ After you're finished please remove all the comments and instructions!
 
 > Deployed project link coming soon.
 
-> - [Live Demo Link](https://github.com/serengia/)
+> - [Live Demo Link](https://serecode-react-todo.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

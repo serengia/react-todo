@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap");
 
+$color-grey-light: #aeadad;
+$color-grey-dark: #333;
+
 *,
 *::after,
 *::before {
@@ -15,11 +18,293 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: $color-grey-dark;
   font-weight: 500;
+  padding-bottom: 4rem;
 }
 
 .row {
   max-width: 90%;
   margin: 0 auto;
+}
+
+.header-container {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-bar {
+  font-size: 4rem;
+}
+
+.nav {
+  width: 20rem;
+  height: 10rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.6rem 0.6rem #0000002f;
+  position: absolute;
+  top: 6.5rem;
+  left: 0;
+  padding: 2rem;
+  border-radius: 0.4rem;
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .link-item {
+      font-size: 2rem;
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #333;
+      }
+
+      a:active,
+      a:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+.about-container,
+.home-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hero {
+  h1 {
+    font-size: 9rem;
+    color: $color-grey-light;
+  }
+
+  height: 15rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  p {
+    color: #b5b5b5;
+  }
+}
+
+.form {
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  input {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    flex: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  button .add-icon {
+    font-size: 2rem;
+  }
+}
+
+.todo-list {
+  margin-top: 1rem;
+  list-style: none;
+
+  .todo-item {
+    margin-top: 2px;
+    background-color: #f0efef;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .approve-button,
+    .close-button,
+    .edit-button,
+    .delete-button {
+      margin-left: 0.5rem;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+
+      .icon {
+        font-size: 2rem;
+      }
+    }
+
+    .close-button {
+      display: none;
+      color: tomato;
+    }
+
+    .approve-button {
+      display: none;
+      color: green;
+    }
+
+    .edit-button {
+      color: blue;
+    }
+
+    .delete-button {
+      color: crimson;
+    }
+
+    .todo-input {
+      border: none;
+      background-color: transparent;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: 500;
+      margin-right: auto;
+      flex: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .checkbox:checked + .todo-input {
+      text-decoration: line-through;
+      color: #636363;
+    }
+  }
+}
+
+.about-container {
+  .details {
+    padding: 2rem 0;
+
+    p {
+      font-size: 2.4rem;
+      line-height: 1.5;
+    }
+
+    .contacts {
+      margin-top: 4rem;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          .icon {
+            color: $color-grey-light;
+          }
+
+          a:link,
+          a:visited {
+            text-decoration: none;
+            color: rgb(3, 3, 126);
+          }
+
+          a:active,
+          a:hover {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-link {
+  color: blue !important;
+}
+
+.nav-slide-enter-active {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.nav-slide-exit-active {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: 600px) {
+  .about-container,
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .form {
+    button .add-icon {
+      font-size: 1.6rem;
+    }
+  }
+
+  .todo-list {
+    .todo-item {
+      .approve-button,
+      .close-button,
+      .edit-button,
+      .delete-button {
+        .icon {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
 }
